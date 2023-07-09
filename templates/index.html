@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatWithYourData_Bot</title>
+</head>
+<body>
+    <h1>ChatWithYourData_Bot</h1>
+
+    <h2>Conversation</h2>
+    <form method="POST" action="/">
+        <input type="text" name="input_text" placeholder="Enter text here..." value="{{ conversation }}">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Database</h2>
+    <form method="POST" action="/load_db">
+        <button type="submit">Load DB</button>
+    </form>
+
+    <h2>Chat History</h2>
+    <form method="POST" action="/clear_history">
+        <button type="submit">Clear History</button>
+    </form>
+
+    <h2>Configure</h2>
+    <img src="{{ image_path }}" alt="Conversation Chain">
+
+</body>
+</html>
+
